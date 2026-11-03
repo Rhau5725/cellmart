@@ -4,7 +4,7 @@ Site estático responsivo em HTML, CSS e JavaScript, sem etapa de build.
 
 Para visualizar: execute `node server.cjs` nesta pasta e abra http://127.0.0.1:4173.
 
-Publicação na Vercel: usar esta pasta como raiz, preset Other, sem comando de build e saída na raiz. Repositório oficial: https://github.com/Rhau5725/cellmart. A publicação na Vercel ainda não foi configurada.
+Publicação na Vercel: usar esta pasta como raiz, preset Other, sem comando de build e saída na raiz. Repositório oficial: https://github.com/Rhau5725/cellmart. Site: https://cellmart-repo.vercel.app. A configuração `vercel.json` fixa o preset Other e serve os arquivos estáticos da raiz sem etapa de build.
 
 O WhatsApp usa exatamente o endereço fornecido no briefing: https://wa.me/553172444883. Nenhum contato alternativo foi presumido.
 
@@ -47,4 +47,5 @@ O frete padrão está explicitamente limitado a viagens dentro de Barão de Coca
 Projeto estático: não há compilação nem dependências de produção. A pasta com HTML, CSS, JavaScript e assets é o próprio resultado de produção. Sintaxe JavaScript, caminhos locais, imagens e fluxos foram verificados no navegador em larguras de celular, tablet e desktop. Os links de WhatsApp foram conferidos sem enviar mensagens.
 
 Antes da publicação, configurar `og:image` com a URL absoluta da logo no domínio definitivo e adicionar `og:url`/canonical. Não foi inventado perfil de rede social. Fontes Google e mapa requerem internet; há fontes de sistema como alternativa.
+
 
