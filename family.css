@@ -1,0 +1,51 @@
+/* Uma mesma família visual, com espaço próprio em cada seção. */
+.family-slot{width:106px;height:116px;margin:0;flex-shrink:0;pointer-events:none;isolation:isolate;transition:opacity .6s ease,translate .6s ease;--family-blink-delay:2s}
+.family-slot svg{display:block;width:100%;height:100%;overflow:visible}
+.family-slot.family-pending{opacity:0;translate:0 9px}
+.family-head{transform-origin:88px 100px;transition:transform .7s cubic-bezier(.22,.61,.36,1)}
+.family-eyes{transform-origin:88px 62px}
+.family-slot *{animation-play-state:paused!important}
+.family-slot.is-active *{animation-play-state:running!important}
+.family-slot.is-active .family-eyes{animation:family-blink 11s linear var(--family-blink-delay) infinite}
+.family-tools .family-tool-arm{transform-origin:113px 117px;animation:family-repair 12s ease-in-out infinite}
+.family-tools .family-head{animation:family-inspect 18s ease-in-out infinite}
+.family-delivery{width:126px;height:122px;margin:0 0 18px auto;--family-blink-delay:5s}
+.family-delivery-phone{animation:family-transfer 13s cubic-bezier(.4,0,.2,1) infinite}
+.family-receive-arm{transform-origin:113px 117px;animation:family-receive 13s ease-in-out infinite}
+.family-warranty{--family-blink-delay:7s}
+.family-shield{transform-origin:120px 155px;animation:family-shield-breathe 14s ease-in-out infinite}
+.family-shield-scan{animation:family-shield-scan 10s ease-in-out infinite}
+.family-proofs{width:70px;height:76px;--family-blink-delay:4s}
+.family-point-arm{transform-origin:113px 117px;transition:transform .7s cubic-bezier(.22,.61,.36,1)}
+.family-proofs.is-reacting .family-head{transform:rotate(5deg)}
+.family-proofs.is-reacting .family-point-arm{transform:rotate(10deg)}
+.family-faq{width:90px;height:98px;--family-blink-delay:6s}
+.family-faq .family-head{transform:rotate(-5deg)}
+.family-think-arm{transform-origin:113px 117px;transition:transform .75s ease}
+.family-faq.has-open-question .family-head{transform:rotate(6deg) translateY(-2px)}
+.family-faq.has-open-question .family-think-arm{transform:rotate(-10deg)}
+.family-contact{width:86px;height:100px;--family-blink-delay:3s}
+.family-wave-arm{transform-origin:113px 117px;animation:family-wave 14s ease-in-out infinite}
+.brand-note{display:grid;grid-template-columns:96px minmax(0,1fr) auto;align-items:center;gap:24px}
+.brand-note>.family-slot{display:block}
+.brand-note>.family-slot,.brand-note>.family-slot svg{width:96px;height:108px}
+.brand-note>div{min-width:0}
+.benefits>div>span,.benefits .family-slot{height:86px;margin-bottom:0}
+.benefits .family-slot{width:92px}
+.family-controls{display:flex;align-items:center;gap:20px}
+.family-controls .carousel-controls{margin-bottom:0}
+.family-faq-row{display:flex;align-items:center;gap:24px;justify-content:space-between;margin-top:20px;max-width:360px}
+.family-faq-row .text-link{margin-top:0;align-self:center}
+.family-contact-cta{display:flex;align-items:center;gap:20px}
+.family-contact-cta .btn{flex-shrink:0}
+@keyframes family-blink{0%,42%,44%,100%{transform:scaleY(1)}43%{transform:scaleY(.08)}}
+@keyframes family-repair{0%,14%,35%,100%{transform:rotate(0)}20%{transform:rotate(-7deg)}25%{transform:rotate(3deg)}30%{transform:rotate(-4deg)}}
+@keyframes family-inspect{0%,35%,70%,100%{transform:rotate(0)}48%,57%{transform:rotate(4deg)}}
+@keyframes family-transfer{0%,12%,80%,100%{transform:translate(0,0)}32%,55%{transform:translate(-26px,8px)}65%{transform:translate(-16px,4px)}}
+@keyframes family-receive{0%,12%,80%,100%{transform:rotate(0)}32%,55%{transform:rotate(7deg)}}
+@keyframes family-shield-breathe{0%,100%{opacity:.85}50%{opacity:1}}
+@keyframes family-shield-scan{0%,10%,60%,100%{opacity:0;transform:translateY(0)}20%{opacity:.5}45%{opacity:0;transform:translateY(29px)}}
+@keyframes family-wave{0%,8%,32%,100%{transform:rotate(0)}13%,23%{transform:rotate(-12deg)}18%,28%{transform:rotate(5deg)}}
+@media(max-width:1100px){.brand-note{grid-template-columns:84px minmax(0,1fr);gap:18px}.brand-note>.family-slot,.brand-note>.family-slot svg{width:84px;height:96px}.brand-note .btn{grid-column:2;justify-self:start;margin-left:0;max-width:none}.family-contact-cta{gap:14px}.family-contact{width:74px;height:86px}.family-delivery{width:110px;height:112px}}
+@media(max-width:760px){.family-slot{width:78px;height:88px}.brand-note{grid-template-columns:70px minmax(0,1fr);align-items:center;gap:16px}.brand-note>.family-slot,.brand-note>.family-slot svg{width:70px;height:84px}.brand-note>div{flex-basis:auto}.brand-note .btn{grid-column:1/-1;width:100%;justify-self:stretch}.family-delivery{width:98px;height:104px;margin:0 0 14px auto}.benefits>div>span{height:54px}.benefits .family-slot{height:82px;width:82px}.testimonials .section-head{flex-wrap:wrap}.family-controls{width:100%;justify-content:space-between;margin-top:0;gap:16px}.family-proofs{width:60px;height:68px}.family-faq-row{margin-top:10px;max-width:none;gap:20px}.family-faq{width:76px;height:86px}.family-contact-cta{display:grid;grid-template-columns:62px minmax(0,1fr);gap:14px;width:100%}.family-contact{width:62px;height:78px}.family-contact-cta .btn{width:100%;min-width:0;gap:10px;justify-content:center}}
+@media(prefers-reduced-motion:reduce){.family-slot,.family-slot *{animation:none!important;transition:none!important}.family-slot.family-pending{opacity:1;translate:none}.family-proofs.is-reacting .family-head,.family-proofs.is-reacting .family-point-arm,.family-faq.has-open-question .family-head,.family-faq.has-open-question .family-think-arm{transform:none}}
