@@ -48,8 +48,12 @@ details[open]{background:transparent;border-color:#718c52}
 @media(max-width:760px){.hero{padding-top:30px;padding-bottom:45px;gap:32px}.hero-copy{padding-top:0}.hero-photo{min-height:0;height:auto;aspect-ratio:1;max-width:480px;border-radius:19px}.hero-photo .mascot-stage{height:calc(54% - 46px);top:0}.hero-photo .mascot{width:38cqw;height:auto;max-height:88%}.hero-photo>.ufo-arrival{width:24%;height:18%;top:10px;right:10px}.hero-photo>img{bottom:24%;height:25%;left:4%;width:92%;border-radius:9px}.hero-photo .photo-label{bottom:3.5%;left:4%;right:4%;height:17%;padding:9px 11px;gap:10px;border-radius:9px}.hero-photo .photo-label strong{font-size:clamp(15px,3.7cqw,19px)}.hero-photo .photo-label small{font-size:clamp(10px,2.2cqw,12px);margin-top:3px}.hero-photo .orb{width:29px;height:29px;font-size:18px}.section{padding-top:68px;padding-bottom:68px}.ticker{min-height:60px;font-size:9px;letter-spacing:.8px}.brand-note{padding:25px 0 0;gap:18px}.brand-note>div{flex-basis:100%}.brand-note .btn{margin-left:0}.benefits{padding-top:45px;padding-bottom:45px}.about-image{border-radius:14px}.proof-copy{padding:28px}.testimonial blockquote{margin-top:0}.steps article{padding:25px 0 25px 58px}.steps b{left:0}.contact-grid article{padding:20px 0}.contact-grid{gap:10px}}
 @media(max-width:390px){.hero-photo{height:auto;min-height:0}.hero-photo .photo-label{padding:8px 10px;gap:8px}.hero-photo .photo-label strong{font-size:15px}.hero-photo .photo-label small{font-size:10px;letter-spacing:-.15px}.hero-photo .orb{width:26px;height:26px}.hero-photo .photo-label{height:18%;bottom:3%}}
 
-/* Bancada abaixo do alienígena, usando a largura interna do componente. */
-.hero-photo>img.hero-workshop{left:3%;bottom:3%;top:auto;width:94%;height:45%;object-fit:cover;object-position:50% 66%;filter:none;opacity:1;mask-image:none;background:#09100b;border:1px solid #53674566;border-radius:10px}
+/* A foto define a própria altura: enquadramento original, sem recortes. */
+.hero-photo{aspect-ratio:auto;height:auto;display:block}
+.hero-art{position:relative;width:100%;aspect-ratio:1.6;min-height:190px;overflow:hidden}
+.hero-photo .hero-art .mascot-stage{top:0;height:calc(100% - 46px)}
+.hero-art>.ufo-arrival{top:12px;right:12px;width:24%;height:29%;filter:drop-shadow(0 3px 10px #88d65015)}
+.hero-photo>img.hero-workshop{position:static;display:block;top:auto;left:auto;bottom:auto;width:min(calc(100% - 24px),300px);height:320px;max-height:none;aspect-ratio:auto;margin:0 auto 12px;object-fit:cover;object-position:50% 67%;filter:none;opacity:1;mask-image:none;background:#09100b;border:1px solid #53674566;border-radius:10px}
 .hero-photo .photo-label{left:33%;right:4%;bottom:4%;height:38%;padding:14px;gap:11px}
 .hero-photo .photo-label strong{font-size:clamp(15px,3.3cqw,20px)}
 .hero-photo .photo-label small{font-size:clamp(10px,2.1cqw,13px)}
@@ -74,4 +78,9 @@ details[open]{background:transparent;border-color:#718c52}
   .hero-copy>.actions>.text-link{align-self:center;justify-content:center;min-height:44px;font-size:14px}
   .hero-copy>.hero-trust{order:5;display:flex;flex-direction:row;justify-content:center;flex-wrap:wrap;gap:6px 18px;margin-top:18px;font-size:11px}
 }
+
+@media(min-width:761px){.hero>.hero-copy{align-self:start;padding-top:24px}}
+@media(max-width:760px){.hero>.hero-photo{aspect-ratio:auto}.hero-art{aspect-ratio:1.45;min-height:190px}.hero-photo>img.hero-workshop{width:min(calc(100% - 24px),220px);height:250px;margin:0 auto 12px}.hero-art>.ufo-arrival{top:10px;right:10px;width:24%;height:27%}}
+
+
 
